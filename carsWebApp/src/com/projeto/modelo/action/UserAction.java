@@ -2,10 +2,13 @@ package com.projeto.modelo.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.projeto.modelo.User;
+import com.projeto.modelo.dao.DAOException;
+import com.projeto.modelo.hibernate.dao.UserHibernateDAO;
 
 public class UserAction extends ActionSupport {
 
 	private User user;
+	private UserHibernateDAO userDao;
 	private String message;
 
 	public User getUser() {
@@ -36,5 +39,15 @@ public class UserAction extends ActionSupport {
 		}
 		return "FAIL";
 	}
+	
+	public String save() throws DAOException {
+		if (getUser() != null) {
+			userDao.create(user);
+			return "SUCCESS";
+		}
+		return "FAIL";
+	}
+	
+	
 
 }
