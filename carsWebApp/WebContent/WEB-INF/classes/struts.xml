@@ -9,5 +9,9 @@
 			<result name="SUCCESS">pagamento.jsp</result>
 			<result name="FAIL">loginfail.jsp</result>
 		</action>
+		<action name="register" class="com.projeto.modelo.action.UserAction" method="registerSave">
+			<result name="SUCCESS">registerendpage.jsp</result>
+			<result name="FAIL">registerfail.jsp</result>		
+		</action>			
 	</package>
 </struts>

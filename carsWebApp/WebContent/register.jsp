@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="cabecalho.jsp" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,24 +25,26 @@
                     <h2>Realize o seu registro no site</h2>
                     </div> 
                      
-                    <form action="register" method="post">
+                    <s:form action="register">
                      <div class="form_row">
-                    <p>Informe seu Email <input type="text" name="email"></p>
+                    <s:label> <s:textfield  type="text" name="user.email" label="Informe seu Email" /></s:label>
                     </div>  
                     
                      <div class="form_row">
-                    <p>Informe sua senha <input type="password" name="password" ></p>
+                     <s:label> <s:password name="user.password" label="Informe sua senha" class="contact2"/></s:label>
+
                     </div>  
                     
                      <div class="form_row">
-                    <p>Informe novamente Senha <input type="password" name="password2"></p>
+                     <s:label> <s:password name="user.password2" label="Informe novamente Senha" class="contact2"/></s:label>
+
                     </div>  
                     
                     <div class="form_row">
-                   <input type="submit" value="Confirmar">
+	                   <s:submit align="left" value="Register"></s:submit>     
                     </div>     
 			  	
-			  		</form>
+			  		</s:form>
                     
                   </div> 
                 
@@ -50,7 +53,7 @@
             <div class="bottom_prod_box_big"></div>                                
         </div>
 
-				
+</div>	
 			  	
 			  	
 

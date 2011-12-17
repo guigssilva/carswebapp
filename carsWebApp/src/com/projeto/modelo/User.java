@@ -33,6 +33,8 @@ public class User implements Serializable {
 	private String password;
 	@Column(name="email")
 	private String email;
+	
+	private transient String password2;
 
 	
 	public User() {
@@ -131,7 +133,21 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 
+	/**
+	 * @return the password2
+	 */
+	public String getPassword2() {
+		return password2;
+	}
+
+	/**
+	 * @param password2 the password2 to set
+	 */
+	public void setPassword2(String password2) {
+		this.password2 = password2;
+	}
+	
+	
 	
 }

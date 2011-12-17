@@ -55,6 +55,15 @@ public class UserAction extends ActionSupport {
 		return "FAIL";
 	}
 	
+	public String registerSave() throws DAOException {
+		if (getUser() != null) {
+			return "SUCCESS";
+		}
+		return "FAIL";
+		
+		
+	}
+	
 	
 
 }
