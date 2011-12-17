@@ -8,7 +8,7 @@ import com.projeto.modelo.hibernate.dao.UserHibernateDAO;
 public class UserAction extends ActionSupport {
 
 	private User user;
-	private UserHibernateDAO userDao;
+	private UserHibernateDAO userDao = new UserHibernateDAO();
 	private String message;
 
 	public User getUser() {
