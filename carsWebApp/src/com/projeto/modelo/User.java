@@ -2,17 +2,33 @@ package com.projeto.modelo;
 
 import java.io.Serializable;
 
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	@Id @GeneratedValue
 	private long id;
+	@Column(name="name")
 	private String name;
+	@Column(name="address1")
 	private String address1;
+	@Column(name="address2")
 	private String address2;
+	@Column(name="city")
 	private String city;
+	@Column(name="state")
 	private String state;
+	@Column(name="zip")
 	private String zip;
+	@Column(name="password")
 	private String password;
+	@Column(name="email")
 	private String email;
 
 	
