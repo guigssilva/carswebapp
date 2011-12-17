@@ -1,11 +1,6 @@
 package com.projeto.modelo.hibernate.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-import org.hibernate.Criteria;
 import org.hibernate.classic.Session;
 import org.hibernate.criterion.Restrictions;
 
@@ -27,7 +22,8 @@ public class UserHibernateDAO {
 		
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		User userRegistered = (User) session.createCriteria(User.class)
-	    .add( Restrictions.like("email", user.getEmail()))	   
+	    .add( Restrictions.like("email", user.getEmail()))	 
+	    .add( Restrictions.like("password", user.getPassword()))	
 	    .uniqueResult();
 	    
 	    return userRegistered;
