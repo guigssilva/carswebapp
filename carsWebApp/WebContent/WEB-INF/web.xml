@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>carsWebApp</display-name>
+ <context-param>
+    <param-name>dbUrl</param-name>
+    <param-value>jdbc:postgresql://200.19.149.225:5432/DB-PI</param-value>
+  </context-param>
+  <context-param>
+    <param-name>driverClass</param-name>
+    <param-value>org.postgresql.Driver</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>webpass</param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>webuser</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+<filter>
+	<filter-name>struts2</filter-name>
+	<filter-class>
+	org.apache.struts2.dispatcher.FilterDispatcher
+	</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+</filter-mapping>
+</web-app>
