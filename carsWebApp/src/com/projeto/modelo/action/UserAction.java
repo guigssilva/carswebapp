@@ -28,6 +28,13 @@ public class UserAction extends ActionSupport {
 	}
 
 	public String execute() {
+		User userAux = new User();
+		try {
+			userAux = userDao.findByEmail(getUser());
+		} catch (DAOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if (getUser() != null) {
 			if (!(user.getEmail().equals("a") && user.getPassword().equals(
 					"123"))) {

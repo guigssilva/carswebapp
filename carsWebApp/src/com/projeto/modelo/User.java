@@ -7,8 +7,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 @Entity
+@Table(name="usuarios")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
