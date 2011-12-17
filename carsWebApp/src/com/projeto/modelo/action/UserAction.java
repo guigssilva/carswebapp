@@ -56,6 +56,10 @@ public class UserAction extends ActionSupport {
 	}
 	
 	public String registerSave() throws DAOException {
+		if(!getUser().getPassword().equals(getUser().getPassword2())){
+			setMessage("As senhas informadas não conferem, verifique!");
+			return "FAIL";
+		}
 		if (getUser() != null) {
 			return "SUCCESS";
 		}
