@@ -6,16 +6,19 @@ import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
 @Entity
+@SequenceGenerator(name = "usuario_serial", sequenceName = "usuario_serial")
 @Table(name="usuarios")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	@Id @GeneratedValue
+	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="usuario_serial")
 	private long id;
 	@Column(name="name")
 	private String name;

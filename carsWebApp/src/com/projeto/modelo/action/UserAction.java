@@ -62,8 +62,7 @@ public class UserAction extends ActionSupport {
 		}
 		if (getUser() != null) {
 			return "SUCCESS";
-		}
-		return "FAIL";
+		} else	return "FAIL";
 		
 		
 	}
