@@ -54,9 +54,9 @@ public class CarrosHibernateDAO {
 	
 	@SuppressWarnings("unchecked")
 	public List<Carros> findByCarros() throws DAOException {
-		
-		List<Carros> userRegistered =  (List<Carros>) session.createCriteria(User.class)
-	    .add( Restrictions.ne("desconto",0 )).list();
+		String zero ="0";
+		List<Carros> userRegistered =  (List<Carros>) session.createCriteria(Carros.class)
+	    .add( Restrictions.ne("desconto",Double.parseDouble(zero))).list();
 	    
 	    return userRegistered;
 	}

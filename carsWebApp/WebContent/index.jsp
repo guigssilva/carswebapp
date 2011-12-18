@@ -11,25 +11,25 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-
+<s:action name="carrosDesconto" />
 		<p>
 		<font size="4" face="Tahoma" color="white">
 		<h1>Ofertas do dia</h1>
 		</font>
 		</p>
 				
-		<s:form action="pesqusiarCarrosDesconto" >
-			<s:iterator value="listaCarros" >
+		<s:form action="carrosDesconto" >
+			<s:iterator value="listaCarros" status="carro" >
 			<div class="oferte_content">
 	        	<div class="top_divider"><img src="images/header_divider.png" alt="" title="" width="1" height="164" /></div>
 	        	<div class="oferta">
 	            
 	           		<div class="oferta_content">
-	           			<img src="<s:url value="imagem" />" />
+	           			<img src="<s:url value="carro.imagem" />" width="94" height="92" />
 	                	<img src="imagesCarros/ferrari.png" width="94" height="92" border="0" class="oferta_img" />	                	
 	                    <div class="oferta_details">
-	                    		<s:label cssClass="oferta_title"> <s:property value="nome"  /></s:label>
-	                    		<s:label cssClass="oferta_text"> <s:property  value="descricao"  /></s:label>
+	                    		<s:label cssClass="oferta_title"> <s:property value="carro.nome"  /></s:label>
+	                    		<s:label cssClass="oferta_text"> <s:property  value="carro.descricao"  /></s:label>
 	                            
 	                            <a href="carros.jsp" class="details">Detalhes</a>
 	                    </div>

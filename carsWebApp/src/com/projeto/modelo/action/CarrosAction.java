@@ -65,7 +65,7 @@ public class CarrosAction extends ActionSupport {
 		this.listaCarros = listaCarros;
 	}
 	
-	private String pesquisarCarrosDesconto() throws DAOException {
+	public String pesqCarrosDesconto() throws DAOException {
 		List<Carros> lisCarrosAux = new ArrayList();
 		lisCarrosAux = carrosDAO.findByCarros();
 		setListaCarros(lisCarrosAux);

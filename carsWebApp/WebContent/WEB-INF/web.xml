@@ -18,7 +18,6 @@
     <param-value>webuser</param-value>
   </context-param>
   <welcome-file-list>
-    <welcome-file>pesqusiarCarrosDesconto.action</welcome-file> 
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>

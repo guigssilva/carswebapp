@@ -26,8 +26,9 @@
 		<action name="insertCarros" class="com.projeto.modelo.action.CarrosAction" method="save">
 			<result name="SUCCESS">finalcontato.jsp</result>
 		</action>	
-		<action name="pesquisarCarrosDesconto" class="com.projeto.modelo.action.CarrosAction" method="pesquisarCarrosDesconto">
+		<action name="carrosDesconto" class="com.projeto.modelo.action.CarrosAction" method="pesqCarrosDesconto">
 			<result>index.jsp</result>
+			
 		</action>	
 	</package>
 </struts>
