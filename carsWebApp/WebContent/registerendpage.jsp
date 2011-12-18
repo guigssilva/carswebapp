@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="cabecalho.jsp" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,30 +25,26 @@
                     <h2 align="left">Preencha o restante do formulário</h2>
                     </div> 
                      
-                    <form action="InsertUser" method="post">
+                    <s:form action="insertUser">
+                    
                     <div class="form_row">
-                    <label class="contact2"><strong>Nome:</strong></label>
-                    <input type="text" name="nome">
+                     <s:label> <s:textfield  type="text" name="user.name" label="Nome" /></s:label>                    
                     </div>  
                     
                     <div class="form_row">
-                    <label class="contact2"><strong>Endereço Residencial:</strong></label>
-                    <input type="text" name="endereco1" >
+                    <s:label> <s:textfield  type="text" name="user.address1" label="Endereço Residencia" /></s:label>   
                     </div>  
                     
                     <div class="form_row">
-                    <label class="contact2"><strong>Endereço Comercial:</strong></label>
-                    <input type="text" name="endereco2">
+                     <s:label> <s:textfield  type="text" name="user.address2" label="Endereço Comercial" /></s:label>                 
                     </div>  
                     
                     <div class="form_row">
-                    <label class="contact2"><strong>Cidade:</strong></label>
-                    <input type="text" name="cidade">
+                    <s:label> <s:textfield  type="text" name="user.city" label="Cidade" /></s:label>  
                     </div>
                     
                     <div class="form_row">
-                    <label class="contact2"><strong>CEP:</strong></label>
-                    <input type="text" name="cep">
+                    <s:label> <s:textfield  type="text" name="user.zip" label="CEP" /></s:label> 
                     </div>
                     
                     <!--
@@ -58,10 +55,10 @@
                     </div> -->
                     
                     <div class="form_row">
-                   <input align="left" type="submit" value="Finalizar">
+                    <s:submit align="left" value="Finalizar"></s:submit>    
                     </div>
 			  	
-			  		</form>
+			  		</s:form>
                     
                   </div> 
                 
