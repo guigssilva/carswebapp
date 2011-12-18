@@ -5,7 +5,9 @@ package com.projeto.modelo.action;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.projeto.modelo.Carros;
 import com.projeto.modelo.dao.DAOException;
@@ -19,7 +21,7 @@ public class CarrosAction extends ActionSupport {
 	
 	private Carros carros;
 	private CarrosHibernateDAO carrosDAO = new CarrosHibernateDAO();
-	private List<Carros> listaCarros;
+	private ArrayList<Carros> listaCarros;
 	/**
 	 * @return the carros
 	 */
@@ -55,22 +57,23 @@ public class CarrosAction extends ActionSupport {
 	/**
 	 * @return the listaCarros
 	 */
-	public List<Carros> getListaCarros() {
+	public ArrayList<Carros> getListaCarros() {
 		return listaCarros;
 	}
 	/**
 	 * @param listaCarros the listaCarros to set
 	 */
-	public void setListaCarros(List<Carros> listaCarros) {
+	public void setListaCarros(ArrayList<Carros> listaCarros) {
 		this.listaCarros = listaCarros;
 	}
 	
 	public String pesqCarrosDesconto() throws DAOException {
 		List<Carros> lisCarrosAux = new ArrayList();
 		lisCarrosAux = carrosDAO.findByCarros();
-		setListaCarros(lisCarrosAux);
+		setListaCarros((ArrayList<Carros>) lisCarrosAux);
 		
-		return "";		
+		return "success";		
 	}
+	
 
 }
