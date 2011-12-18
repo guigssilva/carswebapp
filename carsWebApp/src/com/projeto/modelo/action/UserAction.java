@@ -29,24 +29,35 @@ public class UserAction extends ActionSupport {
 
 	public String execute() {
 		User userAux = new User();
+
 		try {
-			userAux = userDao.findByEmail(getUser());
+			if (getUser() != null) {
+				userAux = userDao.findByEmail(getUser());
+				if(userAux == null){
+					return "CADASTRO";
+				}
+				if ((user.getEmail().equals(userAux.getEmail()) && user.getPassword().equals(
+						user.getPassword()))) {
+					setMessage("Olá " + user.getEmail() + ".");
+					return "SUCCESS";
+					
+				}else{
+				setMessage("Erro ao logar com o usuário: "
+						+ user.getEmail());
+				return "FAIL";
+				}
+				
+			}
+			
+
 		} catch (DAOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if (getUser() != null) {
-			if (!(user.getEmail().equals("a") && user.getPassword().equals(
-					"123"))) {
-				setMessage("Erro ao logar com o usuário: " + user.getEmail());
-				return "FAIL";
-			}
-			setMessage("Olá " + user.getEmail() + ".");
-			return "SUCCESS";
-		}
 		return "FAIL";
+
 	}
-	
+
 	public String save() throws DAOException {
 		if (getUser() != null) {
 			userDao.create(user);
@@ -54,19 +65,17 @@ public class UserAction extends ActionSupport {
 		}
 		return "FAIL";
 	}
-	
+
 	public String registerSave() throws DAOException {
-		if(!getUser().getPassword().equals(getUser().getPassword2())){
+		if (!getUser().getPassword().equals(getUser().getPassword2())) {
 			setMessage("As senhas informadas não conferem, verifique!");
 			return "FAIL";
 		}
 		if (getUser() != null) {
 			return "SUCCESS";
-		} else	return "FAIL";
-		
-		
+		} else
+			return "FAIL";
+
 	}
-	
-	
 
 }

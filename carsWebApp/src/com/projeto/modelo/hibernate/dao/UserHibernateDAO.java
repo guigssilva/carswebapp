@@ -35,7 +35,7 @@ public class UserHibernateDAO {
 		
 		User userRegistered = (User) session.createCriteria(User.class)
 	    .add( Restrictions.like("email", user.getEmail()))	 
-	    .add( Restrictions.like("password", user.getPassword()))	
+	    //.add( Restrictions.like("password", user.getPassword()))	
 	    .uniqueResult();
 	    
 	    return userRegistered;

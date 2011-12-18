@@ -28,6 +28,14 @@
                     <s:form action="insertUser">
                     
                     <div class="form_row">
+                     <s:label> <s:textfield  type="text" name="user.email" required="false"  /></s:label>                    
+                    </div>  
+                    
+                    <div class="form_row">
+                     <s:label> <s:textfield  type="text" name="user.password" required="false" /></s:label>                    
+                    </div>  
+                    
+                    <div class="form_row">
                      <s:label> <s:textfield  type="text" name="user.name" label="Nome" /></s:label>                    
                     </div>  
                     

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="cabecalho.jsp" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,47 +18,44 @@
         	<div class="top_prod_box_big"></div>
             <div class="center_prod_box_big">            
                  
+              <s:form action="insertContato">
               	<div class="contact_form">
                            
                     <div class="form_row">
-                    <label class="contact"><strong>Nome:</strong></label>
-                    <input type="text" class="contact_input" id="nome" />
+                    <s:label> <s:textfield  type="text" name="contato.nome" label="Nome:" cssClass="contact_input" /></s:label>
                     </div>  
 
                     <div class="form_row">
-                    <label class="contact"><strong>Email:</strong></label>
-                    <input type="text" class="contact_input" onblur="validarEmail(this)" id="email"/>
+                    <s:label> <s:textfield  type="text" name="contato.email" label="Email:" onblur="validarEmail(this)" cssClass="contact_input" /></s:label>
                     </div>
 
 
                     <div class="form_row">
-                    <label class="contact"><strong>Telefone:</strong></label>
-                    <input type="text" class="contact_input"  id="telefone"/>
+                     <s:label> <s:textfield  type="text" name="contato.telefone" label="Telefone:" cssClass="contact_input" /></s:label>
                     </div>
                     
                     <div class="form_row">
-                    <label class="contact"><strong>Empresa:</strong></label>
-                    <input type="text" class="contact_input" id="empresa"/>
+                    <s:label> <s:textfield  type="text" name="contato.empresa" label="Empresa:" cssClass="contact_input" /></s:label>
                     </div>
 
 
                     <div class="form_row">
-                    <label class="contact"><strong>Messagem:</strong></label>
-                    <textarea class="contact_textarea" id="mensagem" ></textarea>
+                    <s:label> <s:textarea  type="text" name="contato.mensagem" label="Mensagem:" cssClass="contact_input" /></s:label>
                     </div>
 
                     
                     <div class="form_row">
-                    <a href="#" class="contact" onclick="enviandoDados();">Enviar</a>
+                    <s:submit cssClass="contact" onclick="enviandoDados();" align="left" value="Enviar"></s:submit>
                     </div>      
                     
                 </div> 
+              </s:form>
                 
                                      
             </div>
             <div class="bottom_prod_box_big"></div>                                
         </div>
-		
+		</div>
 		
 
 </body>

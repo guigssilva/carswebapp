@@ -12,14 +12,8 @@
 <body>
 
 
-	<%	ServletContext context= this.getServletContext();
-		String user = (String) context.getAttribute("USER");		
-		
-		response.setContentType("text/html");
-	%>
-	
 	<p> <font size="4" face="Tahoma" color="white">
-		Olá ${USER}, seu registro foi realizado com sucesso!</font></p>
+		Olá ${user.name}, seu registro foi realizado com sucesso!</font></p>
 
 
 
