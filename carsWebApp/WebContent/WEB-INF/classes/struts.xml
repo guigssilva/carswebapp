@@ -20,8 +20,14 @@
 			<result name="FAIL">registerfail.jsp</result>		
 		</action>		
 		<action name="insertContato" class="com.projeto.modelo.action.ContatoAction" method="save">
-			<result name="SUCCESS">pagamento.jsp</result>
+			<result name="SUCCESS">finalcontato.jsp</result>
 			<result name="FAIL">registerfail.jsp</result>		
+		</action>	
+		<action name="insertCarros" class="com.projeto.modelo.action.CarrosAction" method="save">
+			<result name="SUCCESS">finalcontato.jsp</result>
+		</action>	
+		<action name="pesquisarCarrosDesconto" class="com.projeto.modelo.action.CarrosAction" method="pesquisarCarrosDesconto">
+			<result>index.jsp</result>
 		</action>	
 	</package>
 </struts>

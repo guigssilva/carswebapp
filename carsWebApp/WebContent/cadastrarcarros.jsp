@@ -12,9 +12,7 @@
 </head>
 <body>
 
-		<p> <font size="4" face="Tahoma" color="white">
-		Olá ${USER}</font></p>
-	
+
     	<div class="prod_box_big">
         	<div class="top_prod_box_big"></div>
             <div class="center_prod_box_big">            
@@ -22,48 +20,42 @@
               	<div class="contact_form">	
               	
               	 <div class="form_row">
-                    <h2 align="left">Preencha o restante do formulário</h2>
+                    <h2 align="left">Preencha o restante do cadastro do carro</h2>
                     </div> 
                      
-                    <s:form action="insertUser">
+                    <s:form action="insertCarros">
                     
-                    <div class="form_row" style="display:none;">
-                     <s:label> <s:textfield  type="text" name="user.email" required="false"  /></s:label>                    
+                    <div class="form_row">
+                     <s:label> <s:textfield  type="text" name="carros.nome" label="Nome" cssClass="contact_input" required="true"/></s:label>                    
                     </div>  
                     
-                    <div class="form_row" style="display:none;">
-                     <s:label> <s:textfield  type="text" name="user.password" required="false" /></s:label>                    
+                    <div class="form_row" >
+                     <s:label> <s:textarea  type="text" name="carros.descricao" label="Descrição" cssClass="contact_input" required="true"/></s:label>                    
                     </div>  
                     
                     <div class="form_row">
-                     <s:label> <s:textfield  type="text" name="user.name" label="Nome" /></s:label>                    
+                     <s:label> <s:textfield  type="text" name="carros.estoque" label="Estoque" cssClass="contact_input" required="true"/></s:label>                    
                     </div>  
                     
                     <div class="form_row">
-                    <s:label> <s:textfield  type="text" name="user.address1" label="Endereço Residencia" /></s:label>   
+                    <s:label> <s:textfield  type="text" name="carros.garantia" label="Garantia" cssClass="contact_input" required="true"/></s:label>   
                     </div>  
                     
                     <div class="form_row">
-                     <s:label> <s:textfield  type="text" name="user.address2" label="Endereço Comercial" /></s:label>                 
+                     <s:label> <s:textfield  type="text" name="carros.valor" label="Valor"cssClass="contact_input" required="true"/></s:label>                 
                     </div>  
                     
                     <div class="form_row">
-                    <s:label> <s:textfield  type="text" name="user.city" label="Cidade" /></s:label>  
+                     <s:label> <s:textfield  type="text" name="carros.desconto" label="Valor com Desconto"cssClass="contact_input" /></s:label>                 
+                    </div>  
+                    
+                    <div class="form_row">
+                    <s:label> <s:textfield  type="text" name="carros.imagem" label="Caminho Imagem" cssClass="contact_input" required="true"/></s:label>  
                     </div>
                     
-                    <div class="form_row">
-                    <s:label> <s:textfield  type="text" name="user.zip" label="CEP" /></s:label> 
-                    </div>
-                    
-                    <!--
-                    <div class="form_row">
-                    <p>Forma de Pagamento</p>
-                    <input type="radio" name="pagamento" value="dinheiro" /> Dinheiro <br />
-					<input type="radio" name="pagamento" value="cartaodecredito" /> Cartão de Crédito
-                    </div> -->
                     
                     <div class="form_row">
-                    <s:submit align="left" value="Finalizar"></s:submit>    
+                    <s:submit align="left" value="Cadastrar"></s:submit>    
                     </div>
 			  	
 			  		</s:form>

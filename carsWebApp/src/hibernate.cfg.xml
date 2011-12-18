@@ -14,11 +14,12 @@
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
-
 		
 
 
 		<mapping class="com.projeto.modelo.User" />
+		<mapping class="com.projeto.modelo.Contato" />
+		<mapping class="com.projeto.modelo.Carros" />
 
 	</session-factory>
 </hibernate-configuration>

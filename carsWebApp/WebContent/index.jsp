@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="cabecalho.jsp" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,27 +18,29 @@
 		</font>
 		</p>
 				
-		
-		<div class="oferte_content">
-        	<div class="top_divider"><img src="images/header_divider.png" alt="" title="" width="1" height="164" /></div>
-        	<div class="oferta">
-            
-           		<div class="oferta_content">
-                	<img src="imagesCarros/ferrari.png" width="94" height="92" border="0" class="oferta_img" />
-                	
-                    <div class="oferta_details">
-                            <div class="oferta_title">Ferrari Enzo</div>
-                            <div class="oferta_text">
-                            O Enzo Ferrari é um super desportivo da Ferrari que foi construido com tecnologias usadas na Formula 1. Foi nomeado em 2004, pela Sports Car International, o numero 3 da lista de melhores carros desportivos dos anos 2000.
-                            </div>
-                            <a href="carros.jsp" class="details">Detalhes</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="top_divider"><img src="images/header_divider.png" alt="" title="" width="1" height="164" /></div>
-        	
-        </div> <!-- end of oferte_content-->
+		<s:form action="pesqusiarCarrosDesconto" >
+			<s:iterator value="listaCarros" >
+			<div class="oferte_content">
+	        	<div class="top_divider"><img src="images/header_divider.png" alt="" title="" width="1" height="164" /></div>
+	        	<div class="oferta">
+	            
+	           		<div class="oferta_content">
+	           			<img src="<s:url value="imagem" />" />
+	                	<img src="imagesCarros/ferrari.png" width="94" height="92" border="0" class="oferta_img" />	                	
+	                    <div class="oferta_details">
+	                    		<s:label cssClass="oferta_title"> <s:property value="nome"  /></s:label>
+	                    		<s:label cssClass="oferta_text"> <s:property  value="descricao"  /></s:label>
+	                            
+	                            <a href="carros.jsp" class="details">Detalhes</a>
+	                    </div>
+	                </div>
+	
+	            </div>
+	            <div class="top_divider"><img src="images/header_divider.png" alt="" title="" width="1" height="164" /></div>
+	        	
+	        </div> <!-- end of oferte_content-->
+        	</s:iterator>
+        </s:form>
 		
 		
 		
