@@ -56,7 +56,8 @@ public class CarrosHibernateDAO {
 	public List<Carros> findByCarros() throws DAOException {
 		String zero ="0";
 		List<Carros> userRegistered =  (List<Carros>) session.createCriteria(Carros.class)
-	    .add( Restrictions.ne("desconto",Double.parseDouble(zero))).list();
+	    .add( Restrictions.ne("desconto",Double.parseDouble(zero)))
+	    .add(Restrictions.ne("estoque",0L)).list();
 	    
 	    return userRegistered;
 	}
