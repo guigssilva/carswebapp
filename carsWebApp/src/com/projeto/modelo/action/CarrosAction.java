@@ -6,6 +6,8 @@ package com.projeto.modelo.action;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Session;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.projeto.modelo.Carros;
 import com.projeto.modelo.dao.DAOException;
@@ -20,6 +22,7 @@ public class CarrosAction extends ActionSupport {
 	private Carros carros;
 	private CarrosHibernateDAO carrosDAO = new CarrosHibernateDAO();
 	private List<Carros> listaCarros = new ArrayList<Carros>();
+	private List<Carros> listaTodosCarros = new ArrayList<Carros>();
 	
 	
 	/**
@@ -47,6 +50,18 @@ public class CarrosAction extends ActionSupport {
 		this.carrosDAO = carrosDAO;
 	}
 	
+	/**
+	 * @return the listaTodosCarros
+	 */
+	public List<Carros> getListaTodosCarros() {
+		return listaTodosCarros;
+	}
+	/**
+	 * @param listaTodosCarros the listaTodosCarros to set
+	 */
+	public void setListaTodosCarros(List<Carros> listaTodosCarros) {
+		this.listaTodosCarros = listaTodosCarros;
+	}
 	public String save() throws DAOException {
 		if (getCarros() != null) {
 			carrosDAO.create(carros);
@@ -66,5 +81,18 @@ public class CarrosAction extends ActionSupport {
 		listaCarros = carrosDAO.findByCarros();		
 		return "SUCCESS";		
 	}
+	
+	public String detalhesCarro()throws DAOException {
+		
+		if(getCarros()!=null){
+			carros=carrosDAO.findByCarrosId(carros.getId() );
+		}	
+		return "SUCCESS";
+	}
+	public String todosCarros()throws DAOException {
+		listaTodosCarros = carrosDAO.findByTodosCarros();
+		return "SUCCESS";
+	}
+	
 
 }

@@ -28,7 +28,13 @@
 		</action>	
 		
 		<action name="carrosDesconto" class="com.projeto.modelo.action.CarrosAction" method="pesqCarrosDesconto">
-			<result name="SUCCESS">index.jsp</result>			
+			<result name="SUCCESS">paginaprincipal.jsp</result>			
 		</action>	
+		<action name="detalhes" class="com.projeto.modelo.action.CarrosAction" method="detalhesCarro">
+			<result name="SUCCESS">carrosDetalhes.jsp</result>			
+		</action>
+		<action name="todosCarros" class="com.projeto.modelo.action.CarrosAction" method="todosCarros">
+			<result name="SUCCESS">carros.jsp</result>			
+		</action>
 	</package>
 </struts>

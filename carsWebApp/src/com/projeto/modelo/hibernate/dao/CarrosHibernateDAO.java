@@ -10,7 +10,6 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 import com.projeto.modelo.Carros;
-import com.projeto.modelo.User;
 import com.projeto.modelo.dao.DAOException;
 
 /**
@@ -60,6 +59,40 @@ public class CarrosHibernateDAO {
 	    .add(Restrictions.ne("estoque",0L)).list();
 	    
 	    return userRegistered;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Carros> findByTodosCarros() throws DAOException {
+		List<Carros> userRegistered =  (List<Carros>) session.createCriteria(Carros.class)
+	    .add(Restrictions.ne("estoque",0L)).list();
+	    
+	    return userRegistered;
+	}
+	
+	public Carros findByCarrosId(Long id) throws DAOException {
+		Carros userRegistered = new Carros();
+		if(id!=null){
+		userRegistered =  (Carros) session.createCriteria(Carros.class)
+	    .add( Restrictions.eq("id",id))
+	    .add(Restrictions.ne("estoque",0L)).uniqueResult();
+		}
+
+	    return userRegistered;
+	}
+	
+	public void atualiza(Carros carro) {
+		Transaction tx = null;
+		try {
+			tx = session.beginTransaction();
+			session.update(carro);
+			tx.commit();
+		} catch (RuntimeException e) {
+			if (tx != null)
+				tx.rollback();
+			throw e;
+		} finally {
+			session.close();
+		}		
 	}
 
 }

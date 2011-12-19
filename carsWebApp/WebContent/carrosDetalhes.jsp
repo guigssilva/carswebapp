@@ -11,49 +11,42 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<s:action name="todosCarros" />
+<s:action name="detalhes" />
 	<p>
 		<font size="4" face="Tahoma" color="white">
 		<h1>Carros</h1>
 		</font>
 		</p>
-		<s:form action="todosCarros">
-			<s:iterator value="listaTodosCarros" status="status" >
+		<s:form action="detalhes">
 		
-				<div class="center_content">
-				<div class="center_title_bar"><s:property value="nome"/></div>
-		    
-		    	<div class="prod_box_big">
-		        	<div class="top_prod_box_big"></div>
-		            <div class="center_prod_box_big">            
-		                 
-		                 <div class="product_img_big">
-		                 <a href="javascript:popImage('<s:property value="imagem"/>','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="<s:property value="imagem"/>" width="94" height="92" alt="" title="" border="0" /></a>
-		                 <div class="thumbs">
-		                 <a href="javascript:popImage('<s:property value="imagem"/>','Some Title')" title="header=[Thumb1] body=[&nbsp;] fade=[on]"><img src="<s:property value="imagem"/>" width="44" height="42" alt="" title="" border="0" /></a>
-		                 </div>
-		                 </div>
-		                     <div class="details_big_box">
-		                         <div class="product_title_big"><s:property value="nome"/></div>
-		                         <div class="specifications">
-		                            Quantidade: <span class="blue"><s:property value="estoque"/></span><br />
-		
-		                            Garantia: <span class="blue"><s:property value="garantia"/> anos</span><br />
-		                            
-		                         </div>
-		                         <s:if test="desconto != null">
-		                         	<div class="prod_price_big"><span class="reduce"><s:property value="valor"/></span> <span class="price"><s:property value="desconto"/></span></div>
-		                         </s:if>
-		                         <s:else>
-		                         	<div class="prod_price_big"><span class="price"><s:property value="valor"/></span></div>
-		                         </s:else>
-		                     </div>
-		                     <a href="loginServicos.jsp" class="details">Comprar</a>                          
-		            </div>
-		            <div class="bottom_prod_box_big"></div>                                
-		        </div>
-		        </div>
-		</s:iterator>
+		<div class="center_content">
+		<div class="center_title_bar"><s:property value="carros.nome"/></div>
+    
+    	<div class="prod_box_big">
+        	<div class="top_prod_box_big"></div>
+            <div class="center_prod_box_big">            
+                 
+                 <div class="product_img_big">
+                 <a href="javascript:popImage('<s:property value="carros.imagem"/>','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="<s:property value="carros.imagem"/>" width="94" height="92" alt="" title="" border="0" /></a>
+                 <div class="thumbs">
+                 <a href="javascript:popImage('<s:property value="carros.imagem"/>','Some Title')" title="header=[Thumb1] body=[&nbsp;] fade=[on]"><img src="<s:property value="carros.imagem"/>" width="44" height="42" alt="" title="" border="0" /></a>
+                 </div>
+                 </div>
+                     <div class="details_big_box">
+                         <div class="product_title_big"><s:property value="carros.nome"/></div>
+                         <div class="specifications">
+                            Quantidade: <span class="blue"><s:property value="carros.estoque"/></span><br />
+
+                            Garantia: <span class="blue"><s:property value="carros.garantia"/> anos</span><br />
+                            
+                         </div>
+                         <div class="prod_price_big"><span class="reduce"><s:property value="carros.valor"/></span> <span class="price"><s:property value="carros.desconto"/></span></div>
+                     </div>
+                     <a href="loginServicos.jsp" class="details">Comprar</a>                          
+            </div>
+            <div class="bottom_prod_box_big"></div>                                
+        </div>
+        </div>
 	</s:form>	
 	        	
        

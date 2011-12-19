@@ -14,11 +14,14 @@
 				<ul>	
 					<li><h3><a href="index.jsp">Home</a></h3></li>
 					<li><h3><a href="aempresa.jsp">A Empresa</a></h3></li>
-					<li><h3><a href="carros.jsp">Carros</a></h3></li>
+					<li><h3><a href="todosCarros">Carros</a></h3></li>
 					<li><h3><a href="contato.jsp">Contato</a></h3></li>
 				</ul>
 			</div>
 			<div class="block3">
+				<ul>	
+					<li><h3><a href="cadastrarcarros.jsp">Cadastrar Carros</a></h3></li>
+				</ul>
 			</div>
 		</div>
 </head>

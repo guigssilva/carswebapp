@@ -55,7 +55,7 @@
                     
                     
                     <div class="form_row">
-                    <s:submit align="left" value="Cadastrar"></s:submit>    
+                    <s:submit align="left" value="Gravar"></s:submit>    
                     </div>
 			  	
 			  		</s:form>
