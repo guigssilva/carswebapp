@@ -16,6 +16,7 @@
 					<li><h3><a href="aempresa.jsp">A Empresa</a></h3></li>
 					<li><h3><a href="todosCarros">Carros</a></h3></li>
 					<li><h3><a href="contato.jsp">Contato</a></h3></li>
+					<li><h3><a href="loterias.jsp">Loterias</a></h3></li>
 				</ul>
 			</div>
 			<div class="block3">

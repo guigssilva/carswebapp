@@ -2,7 +2,6 @@ package com.projeto.modelo;
 
 import java.io.Serializable;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +19,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="usuario_serial")
 	private long id;
-	@Column(name="name")
+	@Column(name="nome")
 	private String name;
 	@Column(name="address1")
 	private String address1;

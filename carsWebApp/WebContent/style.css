@@ -1,3 +1,27 @@
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 1px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 1px #ffffff;
+	box-shadow:inset 0px 1px 0px 1px #ffffff;
+	background-color:#4b71e3;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	display:inline-block;
+	color:#fafafa;
+	font-family:arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:9px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #ffffff;
+}
+.myButton:hover {
+	background-color:#eb0707;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 *{
 margin:0px;
 padding:0px
