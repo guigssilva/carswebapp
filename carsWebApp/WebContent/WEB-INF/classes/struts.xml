@@ -36,5 +36,11 @@
 		<action name="todosCarros" class="com.projeto.modelo.action.CarrosAction" method="todosCarros">
 			<result name="SUCCESS">carros.jsp</result>			
 		</action>
+		<action name="gerarLotoFacil" class="com.projeto.modelo.action.LotoFacilAction" method="gerarLotoFacil">
+			<result name="SUCCESS">lotofacil.jsp</result>			
+		</action>
+		<action name="gravarLotoFacil" class="com.projeto.modelo.action.LotoFacilAction" method="gravarLotoFacil">
+			<result name="SUCCESS">cadastrarlotofacil.jsp</result>			
+		</action>
 	</package>
 </struts>

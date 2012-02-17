@@ -20,6 +20,7 @@
 		<mapping class="com.projeto.modelo.User" />
 		<mapping class="com.projeto.modelo.Contato" />
 		<mapping class="com.projeto.modelo.Carros" />
+		<mapping class="com.projeto.modelo.LotoFacil" />
 
 	</session-factory>
 </hibernate-configuration>
