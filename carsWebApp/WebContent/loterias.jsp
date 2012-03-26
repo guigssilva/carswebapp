@@ -14,7 +14,7 @@
 		<h1>Loterias</h1>
 		</font>
 		
-		<a href="#" class="myButton">MEGASENA</a>
+		<a href="megasena.jsp" class="myButton">MEGASENA</a>
 		
 		<a href="lotofacil.jsp" class="myButton">LOTOFÁCIL</a>	
 </body>

@@ -42,5 +42,8 @@
 		<action name="gravarLotoFacil" class="com.projeto.modelo.action.LotoFacilAction" method="gravarLotoFacil">
 			<result name="SUCCESS">cadastrarlotofacil.jsp</result>			
 		</action>
+		<action name="gerarMegaSena" class="com.projeto.modelo.action.MegaSenaAction" method="gerarMegaSena">
+			<result name="SUCCESS">megasena.jsp</result>			
+		</action>
 	</package>
 </struts>
