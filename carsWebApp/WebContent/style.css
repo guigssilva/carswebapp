@@ -1,3 +1,95 @@
+body {
+	background: url(images/body-bkg.png) repeat scroll;
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	margin: 0pt auto;
+	width:950px;
+}
+
+#header{
+	background: url(images/hdr-bkg.png) repeat-x scroll;
+	height:181px;
+	top: 0px;
+	left:0px;
+	width:100%;
+}
+
+#navigation{
+	height:60px;
+}
+
+#home, #home div, 
+#about, #about div, 
+#services , #services div, 
+#solutions, #solutions div, 
+#contact,  #contact div {
+	height:80px;
+	position:absolute;
+	width:97px;
+	float:left;
+}
+
+#home, #about, #services, #solutions, #contact{
+	background-image: url(images/nav.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	top:171px;
+}
+
+#home{
+	background-position: 0px -25px;
+	margin-left:6px;
+}
+
+#about{
+	background-position: -98px -25px;
+	margin-left:105px;
+}
+
+#services{
+	background-position: -196px -25px;
+	margin-left:204px;
+}
+
+#solutions{
+	background-position: -294px -25px;
+	margin-left:303px;
+}
+
+#contact{
+	background-position: -392px -25px;
+	margin-left:402px;
+}
+
+#home div, #about div, #services div, #solutions div, #contact div {
+	background-image: url(images/white.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: 0px -60px;	
+}	
+
+.pri-nav a{
+	display:block;
+	text-decoration:none;
+	text-indent:-30000px;
+}
+
+.content{
+	margin-top:160px;
+}
+
+#content-title{
+	background: url(images/content-title.png) no-repeat scroll;
+	height:323px;
+	position:absolute;
+	width:100%;
+}
+/*FIM NOVO GUILHERME SILVA 03/04/2012*/
+
+
 /* css defined within nitobi */
 .nitobi input, .nitobi textarea, .nitobi select, .nitobi ntb-input {
 	color:#333333;
@@ -53,12 +145,7 @@ html{
 width:100%;
 height:100%;
 }
-body{
-width:766px;
-margin:auto;
-font-family:Tahoma;
-font-size:11px;
-background-image:url('images/index.png');}
+
 
 .block1{
 background-image:url(images/bg1.gif);
@@ -71,37 +158,6 @@ padding:5px 0 0 35px;
 float:left
 }
 
-/*---------------- menu tab----------------------
-#menu_tab{
-width:766px;
-height:36px;
-background:url(images/menu_bg.gif) repeat-x;
-}
-ul.menu {
-list-style-type:none; float:left; display:block; width:982px; 
-margin:0px; padding:0px;background:url(images/menu_bg.gif) repeat-x;}
-
-ul.menu li {
-display:inline;
-font-size:11px;
-font-weight:bold;
-line-height:36px;
-}
-ul.menu li.divider {
-display:inline;
-width:4px;
-height:36px;
-float:left;
-background:url(images/menu_divider.gif) no-repeat center;
-}
-
-a.nav:link, a.nav:visited {
-display:block; float:left; padding:0px 8px 0px 8px; margin:0 14px 0 14px;height:36px;text-decoration:none;color:#fff;}
-
-a.nav:hover{
-display:block; float:left; padding:0px 8px 0px 8px; margin:0 14px 0 14px;height:36px;text-decoration:none;color:#199ECD;}
-
----------------------- Fim menu Tab ------------------------------*/
 .block1 li{
 list-style-type:none;
 color:#FFFFFF;

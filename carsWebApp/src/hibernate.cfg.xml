@@ -21,6 +21,6 @@
 		<mapping class="com.projeto.modelo.Contato" />
 		<mapping class="com.projeto.modelo.Carros" />
 		<mapping class="com.projeto.modelo.LotoFacil" />
-
+		<mapping class="com.projeto.modelo.MegaSena" />
 	</session-factory>
 </hibernate-configuration>

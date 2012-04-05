@@ -10,17 +10,19 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-	<p>
-		<font size="4" face="Tahoma" color="white">
-		<h1>A empresa</h1>
-		</font>
-		</p>
-		<br>
-		<p> <font size="2" face="Tahoma" color="white">
-		A empresa GRT Veiculos surgiu no ano de 2011, a ideia de 4 amigos de montar um empresa que vende carros online. A idéia foi colocada em pratica e hoje a empresa é especializada em vendas de carros importados.
-		</font>
-		</p>
 
+
+				<p>
+					<font size="4" face="Tahoma" color="white">
+					<h1>A empresa</h1>
+					</font>
+					</p>
+					<br>
+					<p> <font size="2" face="Tahoma" color="white">
+					A empresa GRT Veiculos surgiu no ano de 2011, a ideia de 4 amigos de montar um empresa que vende carros online. A idéia foi colocada em pratica e hoje a empresa é especializada em vendas de carros importados.
+					</font>
+				</p>
+				
 </body>
 <%@ include file="rodape.jsp" %>
 </html>

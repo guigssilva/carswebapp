@@ -67,7 +67,7 @@ public class MegaSenaAction extends ActionSupport {
 		this.listaMegaSena = listaMegaSena;
 	}
 
-	public String gerarLotoFacil() {
+	public String gerarNumerosMegaSena() {
 		
 
 		if (getQtdJogos() != null && getQtdJogos() > 0) {
@@ -107,7 +107,7 @@ public class MegaSenaAction extends ActionSupport {
 
 	}
 	
-	public String gravarrLotoFacil() {
+	public String gravarMegaSena() {
 		return "SUCCESS";
 	}
 }
