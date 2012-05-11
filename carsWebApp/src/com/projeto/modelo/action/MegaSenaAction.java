@@ -67,7 +67,7 @@ public class MegaSenaAction extends ActionSupport {
 		this.listaMegaSena = listaMegaSena;
 	}
 
-	public String gerarNumerosMegaSena() {
+	public String gerarMegaSena() {
 		
 
 		if (getQtdJogos() != null && getQtdJogos() > 0) {

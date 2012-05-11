@@ -52,12 +52,12 @@
 	   </ul>
 	</div>
 	</div>
-	<div class="container">
+	<%-- <div class="container">
 		<div class="content">
 			<div id="content-title"></div>
 			<!-- the rest of the content-->
 		</div>
-	</div>
+	</div>--%>
 	</div>
 	
 </body>
